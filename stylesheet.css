@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+    color:white;
+    background-color: black;
+}
+html{
+    font-size: 62.5%;   
+    overflow-x: hidden;
+    scroll-padding-top: 7rem;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+html::-webkit-scrollbar-thumb{
+    background-color: white;
+    border-radius: 5rem;
+}
+
+.header{
+    top: 0;right: 0;left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    padding: 1.4rem 7%;
+    z-index: 999;
+}
+.header .logoContent{
+    display: flex;
+    align-items: center;
+}
+
+.header .logoContent .logoName {
+    color: gold;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.header .navbar a{
+    font-size: 2rem;
+    margin-right: 3rem;
+    font-weight: bold;
+}
+.header .navbar a:hover{
+    border-bottom: .1rem solid white;
+    padding-bottom: .4rem;
+}
+
+
+.home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    
+}
+.home .homeContent{
+    width: 50%;
+    float: left;
+    text-align: center;
+    padding: 4rem;
+    
+}
+.home .homeContent h2{
+    font-size: 7rem;
+    font-weight: bolder;
+    margin-bottom: 2rem;
+    line-height: 8rem;
+    
+}
+.home .homeContent p{
+    font-size: 1.8rem;
+    line-height: 2;
+    margin-bottom: 3rem;
+}
+
+.home .homeContent .memo{
+    color:gold !important;
+}
+.home .homeContent .home-btn{
+    height: 3rem;
+}
+.home .homeContent .home-btn button{
+    font-size: 1.8rem;
+    background-color: gold;
+    border-radius: .7rem;
+    padding: .7rem 2.4rem;
+    cursor: pointer;
+}
+.home .homeContent .home-btn button:hover{
+    font-size: 2rem;
+}
+
+.home .homeContent .imgbox{
+    position: relative;
+    justify-content: flex-end;
+    margin-left: 80rem;
+    margin-top: -40rem;
+}
+
+.imgbox ::before {
+    content: "";
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index:-1;
+}
+
+section{
+    padding: 2rem 7%;
+}
+.heading{
+    text-align: center;
+    font-size: 2.6rem;
+    margin-top: 10rem;
+  
+}
+
+.product .product-row{
+    margin-bottom: 5rem;
+    display: flex;
+    align-items: center;
+}
+.product .product-row .box{
+    display: flex;
+    flex-direction: column;
+    width: 50rem;
+    align-items: center;
+    text-align: center;
+    padding: 2rem;
+    gap: 1.5rem;
+    border-radius: 3rem;
+    margin-right: 3rem;
+}
+.product .product-row .img img{
+    clip-path: circle(50% at 50% 50%);
+}
+.product .product-row .img img:hover{
+    transform: scale(1.1);
+}
+.product .product-row .content {
+    margin-bottom: 4rem;
+}
+.product .product-row .product-content h3{
+    font-size: 4rem;
+  
+}
+
+
+.product .product-row .product-content .orderNow{
+    height: 3rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+.product .product-row .product-content .orderNow button{
+    font-size: 1.8rem;
+    background-color: gold;
+    border-radius: .7rem;
+    padding: .7rem 2rem;
+    cursor: pointer;
+}
+.product .product-row .product-content .orderNow button:hover{
+    font-size: 2rem;
+}
+
+
+
+
+
+.footer .share{
+    padding: 1rem 0;
+    text-align: center;
+}
+.footer .share a{
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    font-size: 2rem;
+    color: var(--white);
+    background: var(--black);
+    margin: 0 .3rem;
+    border-radius: 50%;
+
+}
+.footer .share a:hover{
+    background: var(--white);
+    color: var(--black);
+}
+.footer .credit{
+    font-size: 2rem;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    
+}
+
+
+
+/* media queries for web responsive */
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding: 1.3rem 3rem;
+    }
+    .home .homeContent{
+        margin-left: 0;
+        width: 80%;
+    }
+}
+
+@media (max-width:768px) {
+    
+    .header .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 25rem;
+        background-color: var(--white);
+        height: 80vh;
+    }
+    .header .navbar.active{
+        right: 0;
+    }
+    .header .navbar a{
+        display: block;
+        font-size: 2rem;
+        color: black;
+        margin: 1.5rem;
+    }
+
+    .home .homeContent{
+        margin-left: 0;
+        width: 90%;
+    }
+}
+
+@media (max-width:600px){
+    html{
+        font-size: 50%;
+    }
+}
